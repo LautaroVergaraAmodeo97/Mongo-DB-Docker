@@ -72,19 +72,27 @@ Ahora vamos a explicar el paso a paso de cada linea para una mejor comprensión.
 
 - Paso 3
 
-  Crear archivos para poder correr el comando en una terminal
+Crear archivos para poder correr el comando en una terminal
 
   ´´´
   touch mongo.sh
   ´´´
-  El comando sh contiene un script interno para que la computadora ejecute perfectamente
+El comando sh contiene un script interno para que la computadora ejecute perfectamente
 
   -Paso 4
 
 Ahora vamos a crear una carpeta para guardar todo.
  ´´´
   mkdir monguitodata && cd monguitodata; cd monguitodata || mkdir log
-  ´´´
+
+´´´
+Una vez que realizamos esto vamos a iniciarlizar el contenedor.
+´´´
+sudo docker-compose up -d
+´´´
+
+Apéndices:
+
 El comando mkdir monguitodata va crear un directorio llamado monguitodata.
 
 El comando && continúa con la siguiente acción si la acción anterior era correcta.
@@ -94,4 +102,21 @@ El comando cd monguitodata cambia al directorio recién creado llamado monguitod
 El comando ;: ejecuta la siguiente acción independientemente del resultado de la acción anterior.
 
 El comando cd monguitodata || mkdir log: Intenta cambiar al directorio monguitodata. De no existir crea un directorio llamado log.
+
+
+- Paso 5
+
+Vamos a realizar en el teclado la combinación Control+D para que volvamos a estar en la línea de comandos anterior (quiere decir que nos salimos de la configuración de mongo para poder utilizarlo normalmente).
+
+- Paso 6
+
+Y para finalizar vamos a asignar permisos de ejecución y ejectuar mongo.sh
+
+´´´
+chmod u+x mongo.sh ./mongo.sh
+´´´
+Apéndices:
+
+El comando chmod permite la asignación de permisos de acceso a carpetas.
+
 
